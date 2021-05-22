@@ -1,0 +1,52 @@
+{
+  "name": "@aerokube/moon-cypress",
+  "version": "1.0.0",
+  "moonVersion": "1.9.0",
+  "description": "Binary installer to use Cypress with Moon",
+  "repository": "aerokube/moon-cypress",
+  "author": "Ivan Krutov <vania-pooh@aerokube.com>",
+  "license": "Apache-2.0",
+  "main": "index.js",
+  "bin": {
+    "moon-cypress": "cli.js"
+  },
+  "dependencies": {
+    "bin-wrapper": "^4.1.0"
+  },
+  "devDependencies": {
+    "bin-check": "^4.1.0",
+    "eslint": "^7.27.0",
+    "mocha": "^8.4.0"
+  },
+  "scripts": {
+    "eslint": "eslint .",
+    "mocha": "mocha",
+    "test": "npm run eslint && npm run mocha",
+    "postinstall": "node lib/install"
+  },
+  "files": [
+    "lib/*.js",
+    "cli.js",
+    "index.js"
+  ],
+  "engines": {
+    "node": ">=10"
+  },
+  "eslintConfig": {
+    "extends": "eslint:recommended",
+    "env": {
+      "es6": true,
+      "node": true
+    },
+    "rules": {
+      "prefer-destructuring": [
+        "error",
+        {
+          "object": true,
+          "array": false
+        }
+      ],
+      "strict": "error"
+    }
+  }
+}
