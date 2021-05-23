@@ -22,7 +22,7 @@
     "eslint": "eslint .",
     "mocha": "mocha",
     "test": "npm run eslint && npm run mocha",
-    "postinstall": "node lib/install"
+    "postinstall": "rimraf vendor && node lib/install"
   },
   "files": [
     "lib/*.js",

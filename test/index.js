@@ -8,7 +8,7 @@ const moonCypress = require('..');
 
 describe('moon-cypress', () => {
   it('should return path to binary and work', () => {
-    return binCheck(moonCypress, ['--help']).then(works => {
+    return binCheck(moonCypress, ['--version']).then(works => {
       assert(works);
     });
   });
