@@ -1,0 +1,26 @@
+name: release
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  publish-release-package:
+    runs-on: ubuntu-latest
+    if: github.repository == 'aerokube/cypress-moon'
+    steps:
+      - uses: actions/checkout@v2
+
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 12.x
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Test
+        run: npm test
+
+      - run: ci/publish.sh release
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
