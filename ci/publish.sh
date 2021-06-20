@@ -17,7 +17,8 @@ if [[ $1 == "release" ]]; then
   NPM_PUBLISH_TAG="latest"
 elif [[ $1 == "snapshot" ]]; then
   if [[ "${VERSION}" != *-* ]]; then
-    die "not publishing release version in snapshot mode"
+    echo "not publishing release version in snapshot mode"
+    exit 0
   fi
 
   UPSTREAM_SHA=$(git ls-remote https://github.com/aerokube/cypress-moon --tags $(git rev-parse --abbrev-ref HEAD) | cut -f1)
