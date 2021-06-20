@@ -11,7 +11,8 @@
     "cypress-moon": "cli.js"
   },
   "dependencies": {
-    "bin-wrapper": "^4.1.0"
+    "bin-wrapper": "^4.1.0",
+    "rimraf": "^3.0.2"
   },
   "devDependencies": {
     "bin-check": "^4.1.0",
