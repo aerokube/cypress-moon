@@ -1,6 +1,6 @@
 {
   "name": "@aerokube/cypress-moon",
-  "version": "1.0.0-next",
+  "version": "1.0.1-next",
   "moonVersion": "1.9.0",
   "description": "Binary installer to use Cypress with Moon",
   "repository": "aerokube/cypress-moon",
@@ -11,7 +11,7 @@
     "cypress-moon": "cli.js"
   },
   "dependencies": {
-    "bin-wrapper": "^4.1.0",
+    "follow-redirects": "^1.14.1",
     "rimraf": "^3.0.2"
   },
   "devDependencies": {
@@ -36,7 +36,7 @@
   "eslintConfig": {
     "extends": "eslint:recommended",
     "env": {
-      "es6": true,
+      "es2017": true,
       "node": true
     },
     "rules": {

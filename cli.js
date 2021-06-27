@@ -2,10 +2,19 @@
 
 'use strict';
 
-const { spawn } = require('child_process');
-const moonCypress = require('.');
-
+const {spawn} = require('child_process');
+const cypressMoon = require('.');
 const input = process.argv.slice(2);
 
-spawn(moonCypress, input, { stdio: 'inherit' })
-  .on('exit', process.exit);
+(async () => {
+    try {
+        const binPath = await cypressMoon();
+        spawn(binPath, input, {stdio: 'inherit'})
+            .on('exit', process.exit);
+    } catch (err) {
+        console.log(err);
+        process.exit(1);
+    }
+})();
+
+
