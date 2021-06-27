@@ -1,5 +1,9 @@
 #!/bin/bash
 set -e
+
+npm config set "@aerokube:registry" "https://registry.npmjs.org"
+npm config set "//registry.npmjs.org/:_authToken" "${NPM_TOKEN}"
+
 set -x
 
 die(){
@@ -31,6 +35,4 @@ else
   die "unknown argument: '$1'"
 fi
 
-npm config set "@aerokube:registry" "https://registry.npmjs.org"
-npm config set "//registry.npmjs.org/:_authToken" "${NPM_TOKEN}"
 npm publish --access public --tag="${NPM_PUBLISH_TAG}"
