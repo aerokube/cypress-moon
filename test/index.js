@@ -4,12 +4,13 @@
 
 const assert = require('assert');
 const binCheck = require('bin-check');
-const moonCypress = require('..');
+const cypressMoon = require('..');
 
 describe('cypress-moon', () => {
-  it('should return path to binary and work', () => {
-    return binCheck(moonCypress, ['--version']).then(works => {
-      assert(works);
+    it('should return path to binary and work', async () => {
+        const outputPath = await cypressMoon();
+        return binCheck(outputPath, ['--version']).then(works => {
+            assert(works);
+        });
     });
-  });
 });
