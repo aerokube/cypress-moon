@@ -12,5 +12,12 @@ describe('cypress-moon', () => {
         return binCheck(outputPath, ['--version']).then(works => {
             assert(works);
         });
+    }).timeout(60000);
+    it('should work with local binary path', async () => {
+        process.env.CYPRESS_MOON_BINARY = 'test/test-script.js';
+        const outputPath = await cypressMoon();
+        return binCheck('node', [outputPath]).then(works => {
+            assert(works);
+        });
     });
 });
