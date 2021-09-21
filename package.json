@@ -1,6 +1,6 @@
 {
   "name": "@aerokube/cypress-moon",
-  "version": "1.0.3-next",
+  "version": "1.0.3-beta-1",
   "moonVersion": "1.9.1",
   "description": "Binary installer to use Cypress with Moon",
   "repository": "aerokube/cypress-moon",
