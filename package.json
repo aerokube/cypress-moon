@@ -1,7 +1,7 @@
 {
   "name": "@aerokube/cypress-moon",
-  "version": "1.0.7",
-  "moonVersion": "2.0.0",
+  "version": "1.0.8",
+  "moonVersion": "2.6.1",
   "description": "Binary installer to use Cypress with Moon",
   "repository": "aerokube/cypress-moon",
   "author": "Ivan Krutov <vania-pooh@aerokube.com>",
@@ -11,13 +11,13 @@
     "cypress-moon": "cli.js"
   },
   "dependencies": {
-    "follow-redirects": "^1.14.1",
+    "follow-redirects": "1.15.4",
     "rimraf": "^3.0.2"
   },
   "devDependencies": {
     "bin-check": "^4.1.0",
     "eslint": "^7.27.0",
-    "mocha": "^8.4.0",
+    "mocha": "10.1.0",
     "nyc": "^15.1.0"
   },
   "scripts": {
