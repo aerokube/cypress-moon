@@ -11,7 +11,7 @@
     "cypress-moon": "cli.js"
   },
   "dependencies": {
-    "follow-redirects": "1.15.4",
+    "follow-redirects": "1.15.6",
     "rimraf": "^3.0.2"
   },
   "devDependencies": {
